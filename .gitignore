@@ -1,0 +1,7 @@
+node_modules
+dist
+coverage
+api/data
+npm-debug.log
+src/config/local.json
+.idea/

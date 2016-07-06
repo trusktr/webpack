@@ -164,32 +164,6 @@ module.exports = function makeWebpackConfig () {
     }]
   };
 
-  // ISPARTA LOADER
-  // Reference: https://github.com/ColCh/isparta-instrumenter-loader
-  // Instrument JS files with Isparta for subsequent code coverage reporting
-  // Skips node_modules and files that end with .spec.js
-  if (isTest) {
-    config.module.preLoaders.push({
-      test: /\.js$/,
-      exclude: [
-        /node_modules/,
-        /\.spec\.js$/
-      ],
-      loader: 'isparta-instrumenter'
-    });
-  }
-
-  /**
-   * PostCSS
-   * Reference: https://github.com/postcss/autoprefixer-core
-   * Add vendor prefixes to your css
-   */
-  config.postcss = [
-    autoprefixer({
-      browsers: ['last 2 version']
-    })
-  ];
-
   /**
    * Plugins
    * Reference: http://webpack.github.io/docs/configuration.html#plugins

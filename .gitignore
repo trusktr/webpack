@@ -4,11 +4,11 @@ npm-debug.log
 docs
 
 # ignore build files
-/*.js
-/*.js.map
-!/webpack.config.js
+#/*.js
+#/*.js.map
+#!/webpack.config.js
 
 # ignore build folders
-/motor
-/motor-html
-/jss
+#/motor
+#/motor-html
+#/jss
